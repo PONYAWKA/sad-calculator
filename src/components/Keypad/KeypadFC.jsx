@@ -1,20 +1,26 @@
-import { KeypadButton,KeypadContainer } from "./components"
-import {KEYS} from '../../constants/keypadKeys'
+import { KeypadButton, KeypadContainer } from "./components";
+import { KEYS } from "../../constants/keypadKeys";
+import { ThemeContext } from "../../utils/ThemeContext";
 
-export const KeypadFC = ({keypadHandle}) =>
-{
-    const handleOnDigit = e => {
-        keypadHandle(e)
-      }
-    return (
+export const KeypadFC = ({ keypadHandle }) => {
+  const handleOnDigit = (e) => {
+    keypadHandle(e);
+  };
+  return (
+    <ThemeContext.Consumer>
+      {({ theme }) => (
         <KeypadContainer>
-          {KEYS.map(item => (
+          {KEYS.map((item) => (
             <KeypadButton
               key={item}
-              onClick={handleOnDigit}>
+              curTheme={theme}
+              onClick={handleOnDigit}
+            >
               {item}
             </KeypadButton>
           ))}
         </KeypadContainer>
-      )
-}
+      )}
+    </ThemeContext.Consumer>
+  );
+};

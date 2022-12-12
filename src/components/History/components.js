@@ -1,13 +1,13 @@
 import styled from "styled-components";
 
 export const HistoryContainer = styled.div`
-  border-left: 3px solid gray;
+  border-left: 3px solid ${({ theme }) => theme.underline};
   display: flex;
+  margin-top: 10px;
   min-width: 200px;
   flex-direction: column;
   overflow: scroll;
   overflow-x: hidden;
-  height: 100%;
   &::-webkit-scrollbar {
     width: 10px;
   }
