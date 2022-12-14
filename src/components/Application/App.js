@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
-import { HOME_PAGE_FC, SETTINGS } from "../../constants/routs";
+import { HOME_PAGE_CL, HOME_PAGE_FC, SETTINGS } from "../../constants/routs";
 import { GlobalTheme } from "../../constants/Themes";
 import { ThemeContext } from "../../utils/ThemeContext";
+import CalculatorCL from "../Calculator/CalculatorCL";
 import { CalculatorFC } from "../Calculator/CalculatorFC";
 import { Header } from "../Header/Header";
 import { Settings } from "../Settings/SettingsFC/SettingsFC";
@@ -36,6 +37,7 @@ function App() {
             <Routes>
               <Route path={HOME_PAGE_FC} element={<CalculatorFC />} />
               <Route path={SETTINGS} element={<Settings />} />
+              <Route path={HOME_PAGE_CL} element={<CalculatorCL />} />
             </Routes>
           </AppBody>
         </ThemeProvider>

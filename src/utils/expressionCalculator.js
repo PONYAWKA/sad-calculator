@@ -77,5 +77,5 @@ export const expressionCalculator = (string) => {
   if (numberStack.length > 1 || singStack?.length > 0 || isNaN(numberStack))
     throw Error("Expression Error!");
   if (numberStack.length == 0) throw Error("Expression Error!");
-  return numberStack.pop();
+  return String(numberStack.pop());
 };

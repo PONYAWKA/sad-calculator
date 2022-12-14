@@ -38,7 +38,7 @@ export const DisplayContainer = styled.div`
   }
 `;
 
-export const DispalyAnswerFC = styled.div`
+export const DispalyAnswer = styled.div`
   display: flex;
   justify-content: end;
 `;

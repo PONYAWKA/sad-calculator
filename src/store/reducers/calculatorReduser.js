@@ -1,6 +1,6 @@
-import { CalculatorApi } from "../../utils/calculator";
-import { expressionCalculator } from "../../utils/expressionCalculator";
+import { CalculatorApi, ExpressionCommand } from "../../utils/calculator";
 import { breaketBalance } from "../../utils/helper";
+import { clearHistory, getHistory, setHistory } from "../../utils/localStorage";
 
 const singList = {
   "+": 1,
@@ -16,7 +16,7 @@ const breaket = {
 };
 const initialState = {
   expression: "0",
-  history: [],
+  history: getHistory(),
   answer: "",
   isCalulated: false,
 };
@@ -33,7 +33,6 @@ export const CalculatorReduser = (state = initialState, action) => {
         return { ...state, expression: expression.slice(0, -1) + payload };
       if (expression === "0" && !singList[payload])
         return { ...state, expression: payload };
-      //if (breaket[lastSymbol] && singList[payload]) return state;
       if ((+lastSymbol || lastSymbol === ".") && payload === "(") return state;
       if (breaket[payload] && breaketBalance(expression + payload) < 0)
         return state;
@@ -44,7 +43,7 @@ export const CalculatorReduser = (state = initialState, action) => {
       };
     }
     case "clear":
-      return { ...state, expression: "0", isCalulated: false };
+      return { ...state, expression: "0", isCalulated: false, answer: "" };
     case "changeSing":
       return {
         ...state,
@@ -54,23 +53,26 @@ export const CalculatorReduser = (state = initialState, action) => {
       };
     case "calculate": {
       const { expression } = state;
-      const calcExp = expressionCalculator(expression);
+      const calcExp = new CalculatorApi().execute(
+        ExpressionCommand,
+        state.expression
+      );
       if (singList[expression.at(-1)]) return state;
+
+      const newHistory = [`${state.expression} = ${calcExp}`, ...state.history];
+      
+      setHistory(newHistory);
       return {
         ...state,
-        answer: calcExp,
-        history: [...state.history, `${state.expression} = ${calcExp}`],
+        answer: expression,
+        history: newHistory,
         expression: calcExp,
         isCalulated: true,
       };
     }
     case "clearHistory":
+      clearHistory();
       return { ...state, history: [], expression: "0", answer: "" };
-    case "defaultCommand":
-      return {
-        ...state,
-        answer: new CalculatorApi().execute(action.payload, state.expression),
-      };
     default:
       return state;
   }

@@ -12,3 +12,7 @@ export const ControlPanel = styled.div`
   flex: 3;
   flex-direction: column;
 `;
+
+export const HideHistoryButton = styled.button`
+
+`
