@@ -15,6 +15,7 @@ export const KeypadFC = ({ keypadHandle }) => {
               key={item}
               curTheme={theme}
               onClick={handleOnDigit}
+              value={item}
             >
               {item}
             </KeypadButton>

@@ -5,6 +5,7 @@ export const HistoryContainer = styled.div`
   display: flex;
   margin-top: 10px;
   min-width: 200px;
+  max-width: 20vw;
   flex-direction: column;
   overflow: scroll;
   overflow-x: hidden;
@@ -21,8 +22,7 @@ export const HistoryTitle = styled.h3`
 `;
 
 export const HistoryTie = styled.div`
-  max-height: 120px;
-  margin: 0 10px;
+  margin: 5px 10px;
   text-align: center;
   font-size: 2rem;
   word-wrap: break-word;

@@ -1,3 +1,5 @@
+import { useDispatch } from "react-redux";
+import { clearHistoy } from "../../../store/actions/actions";
 import {
   ClearHistoryButton,
   SettingContent,
@@ -7,12 +9,17 @@ import {
 import { ThemeSelector } from "./ThemeSelectorFC";
 
 export const Settings = () => {
+  const dispatch = useDispatch();
+  const clearHistoryHandler = () => dispatch(clearHistoy());
+
   return (
     <SettingsBody>
       <SettingContent>
         <SettingTitle>Settings</SettingTitle>
         <ThemeSelector />
-        <ClearHistoryButton>Clear All History</ClearHistoryButton>
+        <ClearHistoryButton onClick={clearHistoryHandler}>
+          Clear All History
+        </ClearHistoryButton>
       </SettingContent>
     </SettingsBody>
   );

@@ -22,4 +22,10 @@ export const KeypadButton = styled.button`
   &:hover {
     background: darkgray;
   }
+  @media (max-width: 851px) {
+    font-size: 32px;
+    border-radius: 16px;
+    width: 70px;
+    height: 70px;
+  }
 `;
