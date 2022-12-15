@@ -3,7 +3,7 @@ export const expressionCalculator = (string) => {
   let solvePorblem = (stack, sing) => {
     let a = stack.pop() ?? 0;
     let b = stack.pop() ?? 0;
-    if (!a && !b) throw Error("Expression Error!");
+    //if (!a && !b) throw Error("Expression Error!");
     stack.push(doEasyMath(b, a, sing));
   };
 
@@ -36,7 +36,8 @@ export const expressionCalculator = (string) => {
 
   if (!string.length) throw Error("String is Empty");
 
-  if (string.match(/([+-/*%][+-/*%]+)/)) throw Error("Expression Error!");
+  if (string.match(/([+\-/*%][+\-/*%]+)/)) throw Error("Expression Error!");
+  if (string.match(/(\(\))/)) throw Error("Expression Error!");
   if (string.match(/^((\d*\.?\d*)([()+-/*%]))*(\d*\.?\d*)$/) === null)
     throw Error("String Error!");
 
@@ -67,6 +68,7 @@ export const expressionCalculator = (string) => {
         localSing = singStack.pop();
       }
     } else {
+      console.log("hete");
       let number = string.substring(i).match(/(\.?[0-9]+\.?[0-9]*)/);
       if (number?.index === 0) {
         i += number[0].length - 1;
@@ -77,5 +79,5 @@ export const expressionCalculator = (string) => {
   if (numberStack.length > 1 || singStack?.length > 0 || isNaN(numberStack))
     throw Error("Expression Error!");
   if (numberStack.length == 0) throw Error("Expression Error!");
-  return String(numberStack.pop());
+  return String(numberStack.pop().toPrecision(3));
 };

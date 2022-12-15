@@ -28,7 +28,7 @@ export const ThemeSwitcher = styled.select`
   }
 `;
 export const ClearHistoryButton = styled.button`
-  padding: 20px 0;
+  padding: 20px 10px;
   margin-top: 30px;
   font-size: 2rem;
   border-radius: 10px;

@@ -22,5 +22,4 @@ export const HideHistoryButton = styled.button`
   border-width: 1px;
   border-radius: 20px;
   overflow: hidden;
-  margin-right: -20px;
 `;

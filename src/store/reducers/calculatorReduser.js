@@ -19,6 +19,7 @@ const initialState = {
   history: getHistory(),
   answer: "",
   isCalulated: false,
+  historyShown: false,
 };
 
 export const CalculatorReduser = (state = initialState, action) => {
@@ -26,10 +27,16 @@ export const CalculatorReduser = (state = initialState, action) => {
     case "addNumber": {
       const { payload } = action;
       const { expression, isCalulated } = state;
+      const lastSymbol = expression?.at(-1);
+      if (lastSymbol === ")" && !breaket[payload] && !singList[payload])
+        return state;
       if (isCalulated && !singList[payload])
         return { ...state, expression: payload };
-      const lastSymbol = expression?.at(-1);
-      if (singList[payload] && singList[lastSymbol])
+      if (
+        singList[payload] &&
+        singList[lastSymbol] &&
+        (payload !== "." || lastSymbol === ".")
+      )
         return { ...state, expression: expression.slice(0, -1) + payload };
       if (expression === "0" && !singList[payload])
         return { ...state, expression: payload };
@@ -53,14 +60,13 @@ export const CalculatorReduser = (state = initialState, action) => {
       };
     case "calculate": {
       const { expression } = state;
+      const lastSymbol = expression?.at(-1);
       const calcExp = new CalculatorApi().execute(
         ExpressionCommand,
         state.expression
       );
-      if (singList[expression.at(-1)]) return state;
-
+      if (singList[lastSymbol]) return state;
       const newHistory = [`${state.expression} = ${calcExp}`, ...state.history];
-
       setHistory(newHistory);
       return {
         ...state,
@@ -73,6 +79,8 @@ export const CalculatorReduser = (state = initialState, action) => {
     case "clearHistory":
       clearHistory();
       return { ...state, history: [], expression: "0", answer: "" };
+    case "hideShowHistory":
+      return { ...state, historyShown: !state.historyShown };
     default:
       return state;
   }

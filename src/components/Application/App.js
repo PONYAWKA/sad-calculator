@@ -5,6 +5,7 @@ import { ROUTES } from "../../constants/routs";
 import { GlobalTheme } from "../../constants/themes";
 import { getStorageTheme, setStorageTheme } from "../../utils/localStorage";
 import { ThemeContext } from "../../utils/ThemeContext";
+import { ErrorBoundary } from "../ErrorBoudaries/ErrorBoundary";
 import { Header } from "../Header/Header";
 import { AppBody } from "./components";
 
@@ -32,7 +33,7 @@ function App() {
   };
 
   return (
-    <>
+    <ErrorBoundary>
       <ThemeContext.Provider value={{ theme, toggleTheme }}>
         <ThemeProvider theme={theme}>
           <AppBody>
@@ -45,7 +46,7 @@ function App() {
           </AppBody>
         </ThemeProvider>
       </ThemeContext.Provider>
-    </>
+    </ErrorBoundary>
   );
 }
 

@@ -1,10 +1,15 @@
+import React from "react";
 import { Themes } from "../../../constants/themes";
 import { ThemeContext } from "../../../utils/ThemeContext";
 import { SettingSubTitle, ThemeSwitcher } from "../components";
 
-export const ThemeSelector = () => {
-  return (
-    <>
+export class ThemeSelectorCL extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return (
       <ThemeContext.Consumer>
         {({ theme, toggleTheme }) => (
           <>
@@ -19,6 +24,6 @@ export const ThemeSelector = () => {
           </>
         )}
       </ThemeContext.Consumer>
-    </>
-  );
-};
+    );
+  }
+}

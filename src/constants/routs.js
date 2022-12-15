@@ -1,25 +1,29 @@
-import CalculatorCL from "../components/Calculator/CalculatorCL";
-import { CalculatorFC } from "../components/Calculator/CalculatorFC";
-import { Settings } from "../components/Settings/SettingsFC/SettingsFC";
+import CalculatorCL from "../Pages/Calculator/CL/CalculatorCL";
+import { CalculatorFC } from "../Pages/Calculator/FC/CalculatorFC";
+import SettingsCL from "../Pages/Settings/CL/SettingsCL";
+import { SettingsFC } from "../Pages/Settings/FC/SettingsFC";
+
 export const HOME_PAGE_FC = "/fc";
 export const HOME_PAGE_CL = "/cl";
-export const SETTINGS_FC = "/settings";
+export const SETTINGS_FC = "/settingsFC";
+export const SETTINGS_CL = "/settingsCL";
 
 export const PATHS = [
   {
     title: "HOME CL",
     path: HOME_PAGE_CL,
-    component: <CalculatorCL />,
   },
   {
     title: "HOME FC",
     path: HOME_PAGE_FC,
-    component: <CalculatorFC />,
   },
   {
     title: "Settings FC",
     path: SETTINGS_FC,
-    component: <Settings />,
+  },
+  {
+    title: "Settings CL",
+    path: SETTINGS_CL,
   },
 ];
 
@@ -34,6 +38,10 @@ export const ROUTES = [
   },
   {
     path: SETTINGS_FC,
-    component: <Settings />,
+    component: <SettingsFC />,
+  },
+  {
+    path: SETTINGS_CL,
+    component: <SettingsCL />,
   },
 ];

@@ -13,3 +13,4 @@ export const addNumber = (Symbol) => {
   return { type: "addNumber", payload: Symbol };
 };
 export const clearHistoy = () => ({ type: "clearHistory" });
+export const hideShowHistory = () => ({ type: "hideShowHistory" });

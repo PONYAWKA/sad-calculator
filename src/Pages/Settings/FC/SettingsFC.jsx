@@ -6,23 +6,20 @@ import {
   SettingContent,
   SettingsBody,
   SettingTitle,
-} from "../components";
-import { ThemeSelector } from "./ThemeSelectorFC";
+} from "../../../components/Settings/components";
+import { ThemeSelectorFC } from "../../../components/Settings/ThemeSelectorFC/ThemeSelectorFC";
 
-export const Settings = () => {
+export const SettingsFC = () => {
   const dispatch = useDispatch();
   const clearHistoryHandler = () => dispatch(clearHistoy());
-
   return (
     <SettingsBody>
       <SettingContent>
         <SettingTitle>Settings</SettingTitle>
-        <ThemeSelector />
-        <div style={{ overflow: "hidden" }}>
-          <ClearHistoryButton onClick={clearHistoryHandler}>
-            Clear All History
-          </ClearHistoryButton>
-        </div>
+        <ThemeSelectorFC />
+        <ClearHistoryButton onClick={clearHistoryHandler}>
+          Clear All History
+        </ClearHistoryButton>
       </SettingContent>
     </SettingsBody>
   );
