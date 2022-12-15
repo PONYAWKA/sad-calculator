@@ -1,3 +1,4 @@
+import React from "react";
 import { useDispatch } from "react-redux";
 import { clearHistoy } from "../../../store/actions/actions";
 import {
@@ -17,9 +18,11 @@ export const Settings = () => {
       <SettingContent>
         <SettingTitle>Settings</SettingTitle>
         <ThemeSelector />
-        <ClearHistoryButton onClick={clearHistoryHandler}>
-          Clear All History
-        </ClearHistoryButton>
+        <div style={{ overflow: "hidden" }}>
+          <ClearHistoryButton onClick={clearHistoryHandler}>
+            Clear All History
+          </ClearHistoryButton>
+        </div>
       </SettingContent>
     </SettingsBody>
   );

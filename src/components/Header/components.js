@@ -7,7 +7,7 @@ export const HeaderBlock = styled.header`
   padding: 20px 30px;
   max-height: 100px;
   background: ${({ theme }) => theme.header};
-  color: ${({ theme }) => theme.textcolor}
+  color: ${({ theme }) => theme.textcolor};
   border: 1px solid #707070;
   font-family: "Kanit", sans-serif;
 `;
@@ -15,7 +15,7 @@ export const HeaderBlock = styled.header`
 export const HeaderTitle = styled.h1`
   color: #b5b5b5;
 `;
-export const HeaderContainer = styled.div`
+export const HeaderContainer = styled.nav`
   display: flex;
   justify-content: space-between;
 `;
@@ -30,7 +30,7 @@ export const HeaderLink = styled(Link)`
   margin: 0 15px;
   font-size: 20px;
   color: #b5b5b5;
-  text-decoration: none;
+  text-decoration: ${(props) => props._isactive};
   &:hover {
     color: red;
   }

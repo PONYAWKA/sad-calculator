@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { addNumber } from "../../store/actions/actions";
 import DispalyCL from "../Display/DisplayCL";
@@ -31,11 +32,15 @@ class CalculatorCL extends React.Component {
           <KeyPadCL keypadHandle={KeyPadHanle} />
         </ControlPanel>
         <HideHistoryButton onClick={hideHistoryButton}>
-          {isHistoryShown ? "Hide" : "Show"}
+          {isHistoryShown ? "Hide\nHistory" : "Show\nHistory"}
         </HideHistoryButton>
         {isHistoryShown && <HistoryCL />}
       </CalculatorBody>
     );
   }
 }
+CalculatorCL.propTypes = {
+  dispatch: PropTypes.func.isRequired,
+};
+
 export default connect()(CalculatorCL);

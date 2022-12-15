@@ -1,5 +1,5 @@
 import { CalculatorApi, ExpressionCommand } from "../../utils/calculator";
-import { breaketBalance } from "../../utils/helper";
+import { breaketBalance } from "../../utils/BreaketBalance";
 import { clearHistory, getHistory, setHistory } from "../../utils/localStorage";
 
 const singList = {
@@ -60,7 +60,7 @@ export const CalculatorReduser = (state = initialState, action) => {
       if (singList[expression.at(-1)]) return state;
 
       const newHistory = [`${state.expression} = ${calcExp}`, ...state.history];
-      
+
       setHistory(newHistory);
       return {
         ...state,

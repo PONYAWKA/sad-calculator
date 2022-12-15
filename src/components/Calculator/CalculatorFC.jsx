@@ -1,3 +1,4 @@
+import React from "react";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addNumber } from "../../store/actions/actions";
@@ -21,7 +22,7 @@ export const CalculatorFC = () => {
         <KeypadFC keypadHandle={KeyPadHanle} />
       </ControlPanel>
       <HideHistoryButton onClick={hideHistoryButton}>
-        {isHistoryShown ? "Hide" : "Show"}
+        {isHistoryShown ? "Hide\nHistory" : "Show\nHistory"}
       </HideHistoryButton>
       {isHistoryShown && <HistoryFC />}
     </CalculatorBody>

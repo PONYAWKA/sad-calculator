@@ -36,8 +36,8 @@ export const expressionCalculator = (string) => {
 
   if (!string.length) throw Error("String is Empty");
 
-  if (string.match(/([+-\/*%][+-\/*%]+)/)) throw Error("Expression Error!");
-  if (string.match(/^((\d*\.?\d*)([\(\)+-/*%]))*(\d*\.?\d*)$/) === null)
+  if (string.match(/([+-/*%][+-/*%]+)/)) throw Error("Expression Error!");
+  if (string.match(/^((\d*\.?\d*)([()+-/*%]))*(\d*\.?\d*)$/) === null)
     throw Error("String Error!");
 
   let numberStack = [];

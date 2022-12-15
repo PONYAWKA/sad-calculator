@@ -1,6 +1,7 @@
 import { KeypadButton, KeypadContainer } from "./components";
 import { KEYS } from "../../constants/keypadKeys";
 import { ThemeContext } from "../../utils/ThemeContext";
+import propTypes from "prop-types";
 
 export const KeypadFC = ({ keypadHandle }) => {
   const handleOnDigit = (e) => {
@@ -24,4 +25,8 @@ export const KeypadFC = ({ keypadHandle }) => {
       )}
     </ThemeContext.Consumer>
   );
+};
+
+KeypadFC.propTypes = {
+  keypadHandle: propTypes.func.isRequired,
 };

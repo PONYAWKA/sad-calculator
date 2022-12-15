@@ -12,6 +12,7 @@ const white = "#fff";
 const dimWhite = "#b5b5b5";
 export const GlobalTheme = {
   light: {
+    name: "light",
     header: grey,
     background: white,
     underline: grey,
@@ -19,17 +20,17 @@ export const GlobalTheme = {
     keyBackground: white,
   },
 
-  black: {
+  dark: {
+    name: "dark",
     header: black,
     background: greyBackground,
     underline: black,
     keyBackground: black,
     textColor: dimWhite,
-    keyBackground: grey,
-
   },
 
   colored: {
+    name: "colored",
     header: yellowGreen,
     background: white,
     underline: grey,

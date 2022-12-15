@@ -1,11 +1,11 @@
-import { HOME_PAGE_CL, HOME_PAGE_FC,SETTINGS } from "../../constants/routs";
+import { PATHS } from "../../constants/routs";
 import {
   HeaderBlock,
   HeaderContainer,
   HeaderNavigationContainer,
   HeaderTitle,
-  HeaderLink,
 } from "./components";
+import { HeaderLinkComponent } from "./HeaderLinkComponent";
 
 export const Header = () => {
   return (
@@ -13,9 +13,9 @@ export const Header = () => {
       <HeaderContainer>
         <HeaderTitle>Calculator app</HeaderTitle>
         <HeaderNavigationContainer>
-          <HeaderLink to={HOME_PAGE_CL}>HOME (CL)</HeaderLink>
-          <HeaderLink to={HOME_PAGE_FC}>HOME (FC)</HeaderLink>
-          <HeaderLink to={SETTINGS}>SETTINGS</HeaderLink>
+          {PATHS.map(({ title, path }) => (
+            <HeaderLinkComponent to={path} key={path} title={title} />
+          ))}
         </HeaderNavigationContainer>
       </HeaderContainer>
     </HeaderBlock>

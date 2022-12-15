@@ -1,28 +1,31 @@
 import { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
-import { HOME_PAGE_CL, HOME_PAGE_FC, SETTINGS } from "../../constants/routs";
-import { GlobalTheme } from "../../constants/Themes";
+import { ROUTES } from "../../constants/routs";
+import { GlobalTheme } from "../../constants/themes";
+import { getStorageTheme, setStorageTheme } from "../../utils/localStorage";
 import { ThemeContext } from "../../utils/ThemeContext";
-import CalculatorCL from "../Calculator/CalculatorCL";
-import { CalculatorFC } from "../Calculator/CalculatorFC";
 import { Header } from "../Header/Header";
-import { Settings } from "../Settings/SettingsFC/SettingsFC";
 import { AppBody } from "./components";
 
 function App() {
-  const [theme, setTheme] = useState(GlobalTheme.light);
+  const [theme, setTheme] = useState(
+    GlobalTheme[getStorageTheme()] ?? GlobalTheme.dark
+  );
 
   const toggleTheme = (event) => {
     const { value } = event.target;
     switch (value) {
       case "light":
+        setStorageTheme("light");
         setTheme(GlobalTheme.light);
         break;
       case "dark":
-        setTheme(GlobalTheme.black);
+        setStorageTheme("dark");
+        setTheme(GlobalTheme.dark);
         break;
       case "colored":
+        setStorageTheme("colored");
         setTheme(GlobalTheme.colored);
         break;
     }
@@ -35,9 +38,9 @@ function App() {
           <AppBody>
             <Header />
             <Routes>
-              <Route path={HOME_PAGE_FC} element={<CalculatorFC />} />
-              <Route path={SETTINGS} element={<Settings />} />
-              <Route path={HOME_PAGE_CL} element={<CalculatorCL />} />
+              {ROUTES.map(({ component, path }) => (
+                <Route path={path} element={component} key={path} />
+              ))}
             </Routes>
           </AppBody>
         </ThemeProvider>

@@ -6,12 +6,10 @@ class Сommand {
 }
 
 export class CalculatorApi {
-  constructor() {
-  }
+  constructor() {}
   execute(Command, expression) {
     this.current = Command.command(expression);
     return this.current;
+  }
 }
-}
-export const ExpressionCommand = new
-  Сommand(expressionCalculator);
+export const ExpressionCommand = new Сommand(expressionCalculator);

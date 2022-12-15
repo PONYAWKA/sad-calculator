@@ -1,4 +1,4 @@
-import { Themes, GlobalTheme } from "../../../constants/Themes";
+import { Themes } from "../../../constants/themes";
 import { ThemeContext } from "../../../utils/ThemeContext";
 import { SettingSubTitle, ThemeSwitcher } from "../components";
 
@@ -9,7 +9,7 @@ export const ThemeSelector = () => {
         {({ theme, toggleTheme }) => (
           <>
             <SettingSubTitle>Switch theme</SettingSubTitle>
-            <ThemeSwitcher onChangeCapture={toggleTheme} defaultValue={theme}>
+            <ThemeSwitcher onChange={toggleTheme} value={theme.name}>
               {Themes.map(({ name, value }) => (
                 <option key={value} value={value}>
                   {name}
