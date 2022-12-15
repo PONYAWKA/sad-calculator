@@ -3,7 +3,6 @@ export const expressionCalculator = (string) => {
   let solvePorblem = (stack, sing) => {
     let a = stack.pop() ?? 0;
     let b = stack.pop() ?? 0;
-    //if (!a && !b) throw Error("Expression Error!");
     stack.push(doEasyMath(b, a, sing));
   };
 
@@ -79,5 +78,5 @@ export const expressionCalculator = (string) => {
   if (numberStack.length > 1 || singStack?.length > 0 || isNaN(numberStack))
     throw Error("Expression Error!");
   if (numberStack.length == 0) throw Error("Expression Error!");
-  return String(numberStack.pop().toPrecision(3));
+  return String(numberStack.pop());
 };

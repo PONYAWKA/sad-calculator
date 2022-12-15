@@ -15,6 +15,7 @@ export const ControlPanel = styled.div`
 
 export const HideHistoryButton = styled.button`
   background: ${({ theme }) => theme.keyBackground};
+  color: ${({ theme }) => theme.textColor};
   max-height: 60px;
   margin: 10% 0;
   max-width: 60px;

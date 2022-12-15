@@ -10,8 +10,8 @@ class DisplayCL extends React.Component {
     const { answer, expression } = this.props;
     return (
       <DisplayContainer>
-        <DispalyAnswer>{answer && `${answer} =`}</DispalyAnswer>
-        <DisplayInfo>{expression}</DisplayInfo>
+        <DispalyAnswer id="Answer">{answer && `${answer} =`}</DispalyAnswer>
+        <DisplayInfo id="Info">{expression}</DisplayInfo>
       </DisplayContainer>
     );
   }

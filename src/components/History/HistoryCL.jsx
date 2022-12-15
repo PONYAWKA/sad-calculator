@@ -11,8 +11,8 @@ class HistoryCL extends React.Component {
     return (
       <HistoryContainer>
         <HistoryTitle>HISTORY</HistoryTitle>
-        {history?.map((item) => (
-          <HistoryTie key={item}>{item}</HistoryTie>
+        {history?.map((item, index) => (
+          <HistoryTie key={index}>{item}</HistoryTie>
         ))}
       </HistoryContainer>
     );

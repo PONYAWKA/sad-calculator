@@ -8,8 +8,7 @@ class Сommand {
 export class CalculatorApi {
   constructor() {}
   execute(Command, expression) {
-    this.current = Command.command(expression);
-    return this.current;
+    return String(Math.round(Command.command(expression) * 1e3) / 1e3);
   }
 }
 export const ExpressionCommand = new Сommand(expressionCalculator);

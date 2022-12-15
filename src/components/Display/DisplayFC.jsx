@@ -6,8 +6,8 @@ export const DispalyFC = () => {
   const answer = useSelector((state) => state.answer);
   return (
     <DisplayContainer>
-      <DispalyAnswer>{answer && `${answer} =`}</DispalyAnswer>
-      <DisplayInfo>{expression}</DisplayInfo>
+      <DispalyAnswer id="Answer">{answer && `${answer} =`}</DispalyAnswer>
+      <DisplayInfo id="Info">{expression}</DisplayInfo>
     </DisplayContainer>
   );
 };
