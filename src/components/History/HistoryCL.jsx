@@ -9,7 +9,7 @@ class HistoryCL extends React.Component {
   render() {
     const { history } = this.props;
     return (
-      <HistoryContainer>
+      <HistoryContainer id="history">
         <HistoryTitle>HISTORY</HistoryTitle>
         {history?.map((item, index) => (
           <HistoryTie key={index}>{item}</HistoryTie>

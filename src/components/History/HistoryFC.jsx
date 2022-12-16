@@ -4,7 +4,7 @@ import { HistoryContainer, HistoryTie, HistoryTitle } from "./components";
 export const HistoryFC = () => {
   const history = useSelector((state) => state.history);
   return (
-    <HistoryContainer>
+    <HistoryContainer id="history">
       <HistoryTitle>HISTORY</HistoryTitle>
       {history?.map((item, index) => (
         <HistoryTie key={index}>{item}</HistoryTie>
