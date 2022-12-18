@@ -17,7 +17,7 @@ export const SettingsFC = () => {
       <SettingContent>
         <SettingTitle>Settings</SettingTitle>
         <ThemeSelectorFC />
-        <ClearHistoryButton onClick={clearHistoryHandler}>
+        <ClearHistoryButton onClick={clearHistoryHandler} id="clear">
           Clear All History
         </ClearHistoryButton>
       </SettingContent>

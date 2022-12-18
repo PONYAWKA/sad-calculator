@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import { PATH_FC } from "../const";
 describe("Navigation", () => {
   it("1", () => {

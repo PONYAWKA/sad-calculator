@@ -7,7 +7,7 @@ export const ThemeSelectorFC = () => {
       {({ theme, toggleTheme }) => (
         <>
           <SettingSubTitle>Switch theme</SettingSubTitle>
-          <ThemeSwitcher onChange={toggleTheme} value={theme.name}>
+          <ThemeSwitcher onChange={toggleTheme} value={theme.name} id="theme">
             {Themes.map(({ name, value }) => (
               <option key={value} value={value}>
                 {name}

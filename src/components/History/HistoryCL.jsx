@@ -1,6 +1,11 @@
 import React from "react";
 import { connect } from "react-redux";
-import { HistoryContainer, HistoryTie, HistoryTitle } from "./components";
+import {
+  HistoryBody,
+  HistoryContainer,
+  HistoryTie,
+  HistoryTitle,
+} from "./components";
 class HistoryCL extends React.Component {
   constructor(props) {
     super(props);
@@ -9,14 +14,14 @@ class HistoryCL extends React.Component {
   render() {
     const { history } = this.props;
     return (
-      <>
+      <HistoryBody>
         <HistoryTitle>HISTORY</HistoryTitle>
         <HistoryContainer id="history">
           {history?.map((item, index) => (
             <HistoryTie key={index}>{item}</HistoryTie>
           ))}
         </HistoryContainer>
-      </>
+      </HistoryBody>
     );
   }
 }
