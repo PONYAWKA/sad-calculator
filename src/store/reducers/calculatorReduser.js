@@ -66,6 +66,8 @@ export const CalculatorReduser = (state = initialState, action) => {
         state.expression
       );
       if (singList[lastSymbol]) return state;
+      if (expression == calcExp) return state;
+
       const newHistory = [`${state.expression} = ${calcExp}`, ...state.history];
       setHistory(newHistory);
       return {

@@ -20,7 +20,7 @@ class SettingsCL extends React.Component {
         <SettingContent>
           <SettingTitle>Settings</SettingTitle>
           <ThemeSelectorCL />
-          <ClearHistoryButton onClick={clearHistoryHandler}>
+          <ClearHistoryButton onClick={clearHistoryHandler} id="clear">
             Clear All History
           </ClearHistoryButton>
         </SettingContent>

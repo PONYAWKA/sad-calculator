@@ -1,14 +1,21 @@
 import { useSelector } from "react-redux";
-import { HistoryContainer, HistoryTie, HistoryTitle } from "./components";
+import {
+  HistoryBody,
+  HistoryContainer,
+  HistoryTie,
+  HistoryTitle,
+} from "./components";
 
 export const HistoryFC = () => {
   const history = useSelector((state) => state.history);
   return (
-    <HistoryContainer id="history">
+    <HistoryBody>
       <HistoryTitle>HISTORY</HistoryTitle>
-      {history?.map((item, index) => (
-        <HistoryTie key={index}>{item}</HistoryTie>
-      ))}
-    </HistoryContainer>
+      <HistoryContainer id="history">
+        {history?.map((item, index) => (
+          <HistoryTie key={index}>{item}</HistoryTie>
+        ))}
+      </HistoryContainer>
+    </HistoryBody>
   );
 };

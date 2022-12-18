@@ -1,17 +1,14 @@
 import styled from "styled-components";
 
 export const HistoryContainer = styled.div`
-  border-left: 3px solid ${({ theme }) => theme.underline};
   display: flex;
-  margin-top: 10px;
-  min-width: 200px;
-  max-width: 20vw;
   flex-direction: column;
   overflow: scroll;
   overflow-x: hidden;
   &::-webkit-scrollbar {
     width: 10px;
   }
+  max-height: 80vh;
 `;
 
 export const HistoryInfo = styled.h3`
@@ -26,4 +23,12 @@ export const HistoryTie = styled.div`
   text-align: center;
   font-size: 2rem;
   word-wrap: break-word;
+`;
+export const HistoryBody = styled.div`
+  display: flex;
+  flex-direction: column;
+  border-left: 3px solid ${({ theme }) => theme.underline};
+  min-width: 200px;
+  max-width: 20vw;
+  margin-top: 10px;
 `;
