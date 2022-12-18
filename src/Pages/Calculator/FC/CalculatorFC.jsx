@@ -1,29 +1,21 @@
 import { useDispatch, useSelector } from "react-redux";
-import { addNumber, hideShowHistory } from "../../../store/actions/actions";
-import { DispalyFC } from "../../../components/Display/DisplayFC";
+import { hideShowHistory } from "../../../store/actions/actions";
 import { HistoryFC } from "../../../components/History/HistoryFC";
-import { KeypadFC } from "../../../components/Keypad/KeypadFC";
 import {
   CalculatorBody,
-  ControlPanel,
   HideHistoryButton,
 } from "../../../components/Calculator/components";
-
-export const CalculatorFC = () => {
+import { CalculatorFC } from "../../../components/Calculator/CalculatorFC";
+export const ControlPanelFC = () => {
   const dispatch = useDispatch();
   const historyShown = useSelector((state) => state.historyShown);
+
   const hideHistoryButton = () => {
     dispatch(hideShowHistory());
   };
-  const KeyPadHanle = ({ target }) => {
-    dispatch(addNumber(target.value));
-  };
   return (
     <CalculatorBody>
-      <ControlPanel>
-        <DispalyFC />
-        <KeypadFC keypadHandle={KeyPadHanle} />
-      </ControlPanel>
+      <CalculatorFC />
       <HideHistoryButton onClick={hideHistoryButton} id="hideShow">
         {historyShown ? "Hide\nHistory" : "Show\nHistory"}
       </HideHistoryButton>

@@ -1,5 +1,6 @@
 import CalculatorCL from "../Pages/Calculator/CL/CalculatorCL";
-import { CalculatorFC } from "../Pages/Calculator/FC/CalculatorFC";
+import { ControlPanelFC } from "../Pages/Calculator/FC/CalculatorFC";
+import { NoRoutPage } from "../Pages/ErrorPage/_404";
 import SettingsCL from "../Pages/Settings/CL/SettingsCL";
 import { SettingsFC } from "../Pages/Settings/FC/SettingsFC";
 
@@ -7,6 +8,7 @@ export const HOME_PAGE_FC = "/fc";
 export const HOME_PAGE_CL = "/cl";
 export const SETTINGS_FC = "/settingsFC";
 export const SETTINGS_CL = "/settingsCL";
+export const NOWHERE = "*";
 
 export const PATHS = [
   {
@@ -34,7 +36,7 @@ export const ROUTES = [
   },
   {
     path: HOME_PAGE_FC,
-    component: <CalculatorFC />,
+    component: <ControlPanelFC />,
   },
   {
     path: SETTINGS_FC,
@@ -43,5 +45,9 @@ export const ROUTES = [
   {
     path: SETTINGS_CL,
     component: <SettingsCL />,
+  },
+  {
+    path: NOWHERE,
+    component: <NoRoutPage />,
   },
 ];
