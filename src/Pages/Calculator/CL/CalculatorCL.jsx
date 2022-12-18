@@ -31,7 +31,7 @@ class CalculatorCL extends React.Component {
           <DispalyCL />
           <KeyPadCL keypadHandle={KeyPadHanle} />
         </ControlPanel>
-        <HideHistoryButton onClick={hideHistoryButton}>
+        <HideHistoryButton onClick={hideHistoryButton} id="hideShow">
           {historyShown ? "Hide\nHistory" : "Show\nHistory"}
         </HideHistoryButton>
         {historyShown && <HistoryCL />}

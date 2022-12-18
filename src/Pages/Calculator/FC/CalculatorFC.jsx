@@ -24,7 +24,7 @@ export const CalculatorFC = () => {
         <DispalyFC />
         <KeypadFC keypadHandle={KeyPadHanle} />
       </ControlPanel>
-      <HideHistoryButton onClick={hideHistoryButton}>
+      <HideHistoryButton onClick={hideHistoryButton} id="hideShow">
         {historyShown ? "Hide\nHistory" : "Show\nHistory"}
       </HideHistoryButton>
       {historyShown && <HistoryFC />}
