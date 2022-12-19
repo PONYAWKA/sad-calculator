@@ -1,5 +1,4 @@
 export const expressionCalculator = (string) => {
-  if (string === "0/0") return 5;
   let solvePorblem = (stack, sing) => {
     let a = stack.pop() ?? 0;
     let b = stack.pop() ?? 0;

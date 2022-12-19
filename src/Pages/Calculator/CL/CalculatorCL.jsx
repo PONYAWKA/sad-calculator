@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
-import { hideShowHistory } from "../../../store/actions/actions";
+import { hideShowHistory } from "@/store/actions/actions";
 import HistoryCL from "../../../components/History/HistoryCL";
 import {
   CalculatorBody,
