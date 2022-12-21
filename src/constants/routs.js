@@ -4,7 +4,7 @@ import { NoRoutPage } from "../Pages/ErrorPage/_404";
 import SettingsCL from "../Pages/Settings/CL/SettingsCL";
 import { SettingsFC } from "../Pages/Settings/FC/SettingsFC";
 
-export const HOME_PAGE_FC = "/fc";
+export const HOME_PAGE_FC = "/";
 export const HOME_PAGE_CL = "/cl";
 export const SETTINGS_FC = "/settingsFC";
 export const SETTINGS_CL = "/settingsCL";
