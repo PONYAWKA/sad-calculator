@@ -1,8 +1,8 @@
 import React from "react";
 import { connect } from "react-redux";
 import { KeypadButton, KeypadContainer } from "./components";
-import { KEYS } from "../../constants/keypadKeys";
-import { ThemeContext } from "../../utils/ThemeContext";
+import { KEYS } from "constants/keypadKeys";
+import { ThemeContext } from "utils/ThemeContext";
 class KeyPadCL extends React.Component {
   constructor(props) {
     super(props);

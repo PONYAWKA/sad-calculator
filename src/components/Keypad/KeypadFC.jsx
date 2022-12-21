@@ -1,6 +1,6 @@
 import { KeypadButton, KeypadContainer } from "./components";
-import { KEYS } from "../../constants/keypadKeys";
-import { ThemeContext } from "../../utils/ThemeContext";
+import { KEYS } from "constants/keypadKeys";
+import { ThemeContext } from "utils/ThemeContext";
 import propTypes from "prop-types";
 
 export const KeypadFC = ({ keypadHandle }) => {

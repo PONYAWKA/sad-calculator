@@ -1,6 +1,6 @@
-import { CalculatorApi, ExpressionCommand } from "../../utils/calculator";
-import { breaketBalance } from "../../utils/BreaketBalance";
-import { clearHistory, getHistory, setHistory } from "../../utils/localStorage";
+import { CalculatorApi, ExpressionCommand } from "utils/calculator";
+import { breaketBalance } from "utils/BreaketBalance";
+import { clearHistory, getHistory, setHistory } from "utils/localStorage";
 
 const singList = {
   "+": 1,

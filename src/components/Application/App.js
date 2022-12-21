@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
-import { ROUTES } from "../../constants/routs";
-import { GlobalTheme } from "../../constants/themes";
-import { getStorageTheme, setStorageTheme } from "../../utils/localStorage";
-import { ThemeContext } from "../../utils/ThemeContext";
+import { ROUTES } from "@/constants/routs";
+import { GlobalTheme } from "constants/themes";
+import { getStorageTheme, setStorageTheme } from "utils/localStorage";
+import { ThemeContext } from "utils/ThemeContext";
 import { ErrorBoundary } from "../ErrorBoudaries/ErrorBoundary";
-import { Header } from "../Header/Header";
+import { Header } from "components/Header/Header";
 import { AppBody } from "./components";
 
 function App() {

@@ -1,4 +1,4 @@
-import { PATHS } from "../../constants/routs";
+import { PATHS } from "constants/routs";
 import {
   HeaderBlock,
   HeaderContainer,

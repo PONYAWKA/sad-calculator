@@ -1,6 +1,6 @@
 import React from "react";
-import { Themes } from "../../../constants/themes";
-import { ThemeContext } from "../../../utils/ThemeContext";
+import { Themes } from "constants/themes";
+import { ThemeContext } from "utils/ThemeContext";
 import { SettingSubTitle, ThemeSwitcher } from "../components";
 
 export class ThemeSelectorCL extends React.Component {

@@ -4,10 +4,10 @@ import {
   SettingContent,
   SettingsBody,
   SettingTitle,
-} from "../../../components/Settings/components";
-import { clearHistoy } from "../../../store/actions/actions";
+} from "components/Settings/components";
+import { clearHistoy } from "@/store/actions/actions";
 import { connect } from "react-redux";
-import { ThemeSelectorCL } from "../../../components/Settings/ThemeSelectorCL/ThemeSelectorCL";
+import { ThemeSelectorCL } from "components/Settings/ThemeSelectorCL/ThemeSelectorCL";
 class SettingsCL extends React.Component {
   constructor(props) {
     super(props);

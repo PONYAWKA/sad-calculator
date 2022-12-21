@@ -1,11 +1,11 @@
 import { useDispatch, useSelector } from "react-redux";
-import { hideShowHistory } from "../../../store/actions/actions";
-import { HistoryFC } from "../../../components/History/HistoryFC";
+import { hideShowHistory } from "@/store/actions/actions";
+import { HistoryFC } from "components/History/HistoryFC";
 import {
   CalculatorBody,
   HideHistoryButton,
-} from "../../../components/Calculator/components";
-import { CalculatorFC } from "../../../components/Calculator/CalculatorFC";
+} from "components/Calculator/components";
+import { CalculatorFC } from "components/Calculator/CalculatorFC";
 export const ControlPanelFC = () => {
   const dispatch = useDispatch();
   const historyShown = useSelector((state) => state.historyShown);

@@ -1,9 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { addNumber } from "../../store/actions/actions";
-import DispalyCL from "../Display/DisplayCL";
+import { addNumber } from "@/store/actions/actions";
+import DispalyCL from "components/Display/DisplayCL";
 import { ControlPanel } from "./components";
-import KeyPadCL from "../Keypad/KeyPadCL";
+import KeyPadCL from "components/Keypad/KeyPadCL";
 import { useDispatch } from "react-redux";
 export const CalculatorFC = () => {
   const dispatch = useDispatch();

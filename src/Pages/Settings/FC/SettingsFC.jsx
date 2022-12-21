@@ -1,13 +1,13 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { clearHistoy } from "../../../store/actions/actions";
+import { clearHistoy } from "@/store/actions/actions";
 import {
   ClearHistoryButton,
   SettingContent,
   SettingsBody,
   SettingTitle,
-} from "../../../components/Settings/components";
-import { ThemeSelectorFC } from "../../../components/Settings/ThemeSelectorFC/ThemeSelectorFC";
+} from "components/Settings/components";
+import { ThemeSelectorFC } from "components/Settings/ThemeSelectorFC/ThemeSelectorFC";
 
 export const SettingsFC = () => {
   const dispatch = useDispatch();
