@@ -11,11 +11,11 @@ export const KeypadContainer = styled.div`
 
 export const KeypadButton = styled.button`
   width: 100px;
-  height: 100px;
+  height: 90px;
   border-radius: 32px;
   cursor: pointer;
   color: ${(props) => props.curTheme.textColor};
-  margin: 15px 0;
+  margin: 5px 0;
   background: ${(props) => props.curTheme.keyBackground};
   border: 1px solid #707070;
   font: normal normal normal 64px/77px "Kanit", sans-serif;

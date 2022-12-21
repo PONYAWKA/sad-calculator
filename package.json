@@ -2,6 +2,7 @@
   "name": "calculator",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://ponyawka.github.io/sad-calculator",
   "dependencies": {
     "@craco/craco": "^7.0.0",
     "@testing-library/jest-dom": "^5.16.5",
@@ -22,6 +23,8 @@
     "webpack-cli": "^5.0.1"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
