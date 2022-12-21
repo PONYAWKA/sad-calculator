@@ -1,3 +1,12 @@
+import {
+  CalculatorApi,
+  DifCommand,
+  DivCommand,
+  ModCommand,
+  MulCommand,
+  SumCommand,
+} from "./calculator";
+
 export const expressionCalculator = (string) => {
   let solvePorblem = (stack, sing) => {
     let a = stack.pop() ?? 0;
@@ -8,15 +17,15 @@ export const expressionCalculator = (string) => {
   let doEasyMath = (a, b, sing) => {
     switch (sing) {
       case "+":
-        return a + b;
+        return new CalculatorApi(a).execute(SumCommand, b);
       case "-":
-        return a - b;
+        return new CalculatorApi(a).execute(DifCommand, b);
       case "*":
-        return a * b;
+        return new CalculatorApi(a).execute(MulCommand, b);
       case "/":
-        return a / b;
+        return new CalculatorApi(a).execute(DivCommand, b);
       case "%":
-        return a % b;
+        return new CalculatorApi(a).execute(ModCommand, b);
       default:
         throw Error("Wrong sing");
     }
