@@ -17,15 +17,15 @@ export const expressionCalculator = (string) => {
   let doEasyMath = (a, b, sing) => {
     switch (sing) {
       case "+":
-        return new CalculatorApi(a).execute(SumCommand, b);
+        return new CalculatorApi(b).execute(SumCommand, a);
       case "-":
-        return new CalculatorApi(a).execute(DifCommand, b);
+        return new CalculatorApi(b).execute(DifCommand, a);
       case "*":
-        return new CalculatorApi(a).execute(MulCommand, b);
+        return new CalculatorApi(b).execute(MulCommand, a);
       case "/":
-        return new CalculatorApi(a).execute(DivCommand, b);
+        return new CalculatorApi(b).execute(DivCommand, a);
       case "%":
-        return new CalculatorApi(a).execute(ModCommand, b);
+        return new CalculatorApi(b).execute(ModCommand, a);
       default:
         throw Error("Wrong sing");
     }
