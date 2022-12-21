@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/static/js/main.c0e96d24.js",
-    "index.html": "/index.html",
-    "main.c0e96d24.js.map": "/static/js/main.c0e96d24.js.map"
+    "main.js": "/sad-calculator/static/js/main.2fa0d8f6.js",
+    "index.html": "/sad-calculator/index.html",
+    "main.2fa0d8f6.js.map": "/sad-calculator/static/js/main.2fa0d8f6.js.map"
   },
   "entrypoints": [
-    "static/js/main.c0e96d24.js"
+    "static/js/main.2fa0d8f6.js"
   ]
 }
