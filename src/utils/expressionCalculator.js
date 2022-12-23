@@ -75,14 +75,18 @@ export const expressionCalculator = (string) => {
         localSing = singStack.pop();
       }
     } else {
-      console.log("hete");
       let number = string.substring(i).match(/(\.?[0-9]+\.?[0-9]*)/);
       if (number?.index === 0) {
         i += number[0].length - 1;
         numberStack.push(Number(number[0]));
       }
+      console.log(numberStack);
+      console.log(singStack, "s");
     }
   }
+
+  console.log(numberStack);
+
   if (numberStack.length > 1 || singStack?.length > 0 || isNaN(numberStack))
     throw Error("Expression Error!");
   if (numberStack.length == 0) throw Error("Expression Error!");

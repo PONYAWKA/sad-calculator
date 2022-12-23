@@ -16,9 +16,7 @@ export class CalculatorApi {
     this.value = value;
   }
   execute(Command, expression) {
-    return String(
-      Math.round(Command.command(expression, this.value) * 1e3) / 1e3
-    );
+    return Math.round(Command.command(expression, this.value) * 1e3) / 1e3;
   }
 }
 export const SumCommand = new Сommand(sum);
