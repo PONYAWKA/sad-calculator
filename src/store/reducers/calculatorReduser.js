@@ -74,7 +74,7 @@ export const CalculatorReduser = (state = initialState, action) => {
         ...state,
         answer: expression,
         history: newHistory,
-        expression: calcExp,
+        expression: String(calcExp),
         isCalulated: true,
       };
     }

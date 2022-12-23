@@ -276,4 +276,24 @@ describe("Math Test", () => {
       cy.get('button[value="="]').click();
       cy.get('div[id="Info"]').should("have.text", "8");
     });
+  it("2+2*4", () => {
+    cy.visit(PATH_CL);
+    cy.get('button[value="2"]').click();
+    cy.get('button[value="+"]').click();
+    cy.get('button[value="2"]').click();
+    cy.get('button[value="*"]').click();
+    cy.get('button[value="4"]').click();
+    cy.get('button[value="="]').click();
+    cy.get('div[id="Info"]').should("have.text", "10");
+  });
+  it("2+2*4", () => {
+    cy.visit(PATH_FC);
+    cy.get('button[value="2"]').click();
+    cy.get('button[value="+"]').click();
+    cy.get('button[value="2"]').click();
+    cy.get('button[value="*"]').click();
+    cy.get('button[value="4"]').click();
+    cy.get('button[value="="]').click();
+    cy.get('div[id="Info"]').should("have.text", "10");
+  });
 });

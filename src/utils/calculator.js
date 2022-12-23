@@ -1,10 +1,10 @@
 import { expressionCalculator } from "./expressionCalculator";
 
-const sum = (a, b) => a + b;
-const dif = (a, b) => a - b;
-const div = (a, b) => a / b;
-const mul = (a, b) => a * b;
-const mod = (a, b) => a % b;
+const sum = (a, b) => +a + +b;
+const dif = (a, b) => +a - +b;
+const div = (a, b) => +a / +b;
+const mul = (a, b) => +a * +b;
+const mod = (a, b) => +a % +b;
 class Сommand {
   constructor(command) {
     this.command = command;

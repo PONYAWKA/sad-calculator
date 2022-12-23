@@ -80,12 +80,8 @@ export const expressionCalculator = (string) => {
         i += number[0].length - 1;
         numberStack.push(Number(number[0]));
       }
-      console.log(numberStack);
-      console.log(singStack, "s");
     }
   }
-
-  console.log(numberStack);
 
   if (numberStack.length > 1 || singStack?.length > 0 || isNaN(numberStack))
     throw Error("Expression Error!");

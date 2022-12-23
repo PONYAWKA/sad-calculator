@@ -19,5 +19,5 @@ export const CalculatorFC = () => {
   );
 };
 CalculatorFC.propTypes = {
-  dispatch: PropTypes.func.isRequired,
+  dispatch: PropTypes.func,
 };
