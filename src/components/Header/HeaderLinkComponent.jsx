@@ -1,5 +1,5 @@
 import { useLocation } from "react-router-dom";
-import { HeaderLink } from "./components";
+import { HeaderLink } from "components/Header/styled";
 
 export const HeaderLinkComponent = ({ to, title }) => {
   const { pathname } = useLocation();

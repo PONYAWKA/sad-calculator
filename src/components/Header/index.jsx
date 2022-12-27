@@ -4,8 +4,8 @@ import {
   HeaderContainer,
   HeaderNavigationContainer,
   HeaderTitle,
-} from "./components";
-import { HeaderLinkComponent } from "./HeaderLinkComponent";
+} from "components/Header/styled";
+import { HeaderLinkComponent } from "components/Header/HeaderLinkComponent";
 
 export const Header = () => {
   return (

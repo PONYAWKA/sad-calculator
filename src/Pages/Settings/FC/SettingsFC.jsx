@@ -6,8 +6,8 @@ import {
   SettingContent,
   SettingsBody,
   SettingTitle,
-} from "components/Settings/components";
-import { ThemeSelectorFC } from "components/Settings/ThemeSelectorFC/ThemeSelectorFC";
+} from "components/Settings/styled";
+import { ThemeSelectorFC } from "components/Settings/ThemeSelectorFC/index";
 
 export const SettingsFC = () => {
   const dispatch = useDispatch();

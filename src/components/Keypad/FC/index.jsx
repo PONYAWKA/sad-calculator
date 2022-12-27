@@ -1,4 +1,4 @@
-import { KeypadButton, KeypadContainer } from "./components";
+import { KeypadButton, KeypadContainer } from "components/Keypad/styled";
 import { KEYS } from "constants/keypadKeys";
 import { ThemeContext } from "utils/ThemeContext";
 import propTypes from "prop-types";

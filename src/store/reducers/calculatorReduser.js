@@ -23,9 +23,9 @@ const initialState = {
 };
 
 export const CalculatorReduser = (state = initialState, action) => {
-  switch (action.type) {
+  const { type, payload } = action;
+  switch (type) {
     case "addNumber": {
-      const { payload } = action;
       const { expression, isCalulated } = state;
       const lastSymbol = expression?.at(-1);
       if (lastSymbol === ")" && !breaket[payload] && !singList[payload])
@@ -66,7 +66,7 @@ export const CalculatorReduser = (state = initialState, action) => {
         state.expression
       );
       if (singList[lastSymbol]) return state;
-      if (expression == calcExp) return state;
+      if (expression === calcExp) return state;
 
       const newHistory = [`${state.expression} = ${calcExp}`, ...state.history];
       setHistory(newHistory);

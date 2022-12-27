@@ -1,5 +1,9 @@
 import { useSelector } from "react-redux";
-import { DisplayContainer, DisplayInfo, DispalyAnswer } from "./components";
+import {
+  DisplayContainer,
+  DisplayInfo,
+  DispalyAnswer,
+} from "components/Display/styled";
 
 export const DispalyFC = () => {
   const expression = useSelector((state) => state.expression);

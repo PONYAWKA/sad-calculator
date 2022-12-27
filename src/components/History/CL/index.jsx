@@ -5,7 +5,7 @@ import {
   HistoryContainer,
   HistoryTie,
   HistoryTitle,
-} from "./components";
+} from "components/History/styled";
 class HistoryCL extends React.Component {
   constructor(props) {
     super(props);
@@ -17,8 +17,8 @@ class HistoryCL extends React.Component {
       <HistoryBody>
         <HistoryTitle>HISTORY</HistoryTitle>
         <HistoryContainer id="history">
-          {history?.map((item, index) => (
-            <HistoryTie key={index}>{item}</HistoryTie>
+          {history?.map((item) => (
+            <HistoryTie key={item}>{item}</HistoryTie>
           ))}
         </HistoryContainer>
       </HistoryBody>

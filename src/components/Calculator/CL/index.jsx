@@ -2,9 +2,9 @@ import React from "react";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import { addNumber } from "@/store/actions/actions";
-import DispalyCL from "components/Display/DisplayCL";
-import { ControlPanel } from "./components";
-import KeyPadCL from "../Keypad/KeyPadCL";
+import DispalyCL from "components/Display/CL/index";
+import { ControlPanel } from "components/Calculator/styled";
+import KeyPadCL from "components/Keypad/CL/index";
 class CalculatorCL extends React.Component {
   render() {
     const { dispatch } = this.props;

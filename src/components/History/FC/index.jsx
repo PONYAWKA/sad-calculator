@@ -4,16 +4,17 @@ import {
   HistoryContainer,
   HistoryTie,
   HistoryTitle,
-} from "./components";
+} from "components/History/styled";
 
 export const HistoryFC = () => {
   const history = useSelector((state) => state.history);
+  console.log("render");
   return (
     <HistoryBody>
       <HistoryTitle>HISTORY</HistoryTitle>
       <HistoryContainer id="history">
-        {history?.map((item, index) => (
-          <HistoryTie key={index}>{item}</HistoryTie>
+        {history?.map((item) => (
+          <HistoryTie key={item}>{item}</HistoryTie>
         ))}
       </HistoryContainer>
     </HistoryBody>

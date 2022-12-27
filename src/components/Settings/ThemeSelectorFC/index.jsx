@@ -1,6 +1,6 @@
 import { Themes } from "constants/themes";
 import { ThemeContext } from "utils/ThemeContext";
-import { SettingSubTitle, ThemeSwitcher } from "../components";
+import { SettingSubTitle, ThemeSwitcher } from "components/Settings/styled";
 export const ThemeSelectorFC = () => {
   return (
     <ThemeContext.Consumer>

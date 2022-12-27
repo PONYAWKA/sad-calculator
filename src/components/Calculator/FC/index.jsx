@@ -1,9 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { addNumber } from "@/store/actions/actions";
-import DispalyCL from "components/Display/DisplayCL";
-import { ControlPanel } from "./components";
-import KeyPadCL from "components/Keypad/KeyPadCL";
+import { DispalyFC } from "components/Display/FC/index";
+import { ControlPanel } from "components/Calculator/styled";
+import { KeypadFC } from "components/Keypad/FC/index";
 import { useDispatch } from "react-redux";
 export const CalculatorFC = () => {
   const dispatch = useDispatch();
@@ -13,8 +13,8 @@ export const CalculatorFC = () => {
   };
   return (
     <ControlPanel>
-      <DispalyCL />
-      <KeyPadCL keypadHandle={KeyPadHanle} />
+      <DispalyFC />
+      <KeypadFC keypadHandle={KeyPadHanle} />
     </ControlPanel>
   );
 };

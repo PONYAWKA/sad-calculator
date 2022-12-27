@@ -1,4 +1,4 @@
-import { expressionCalculator } from "./expressionCalculator";
+import { expressionCalculator } from "utils/expressionCalculator";
 
 const sum = (a, b) => +a + +b;
 const dif = (a, b) => +a - +b;

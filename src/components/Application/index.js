@@ -5,9 +5,9 @@ import { ROUTES } from "@/constants/routs";
 import { GlobalTheme } from "constants/themes";
 import { getStorageTheme, setStorageTheme } from "utils/localStorage";
 import { ThemeContext } from "utils/ThemeContext";
-import { ErrorBoundary } from "../ErrorBoudaries/ErrorBoundary";
-import { Header } from "components/Header/Header";
-import { AppBody } from "./components";
+import { ErrorBoundary } from "../ErrorBoudaries";
+import { Header } from "components/Header/index";
+import { AppBody } from "components/Application/styled";
 
 function App() {
   const [theme, setTheme] = useState(

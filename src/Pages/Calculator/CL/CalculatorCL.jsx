@@ -2,12 +2,12 @@ import React from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { hideShowHistory } from "@/store/actions/actions";
-import HistoryCL from "components/History/HistoryCL";
+import HistoryCL from "components/History/CL/index";
 import {
   CalculatorBody,
   HideHistoryButton,
-} from "components/Calculator/components";
-import CalculatorCL from "components/Calculator/CalculatorCL";
+} from "components/Calculator/styled";
+import CalculatorCL from "components/Calculator/CL/index";
 class ControlPanel extends React.Component {
   constructor(props) {
     super(props);

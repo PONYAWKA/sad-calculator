@@ -1,7 +1,7 @@
 import React from "react";
 import { Themes } from "constants/themes";
 import { ThemeContext } from "utils/ThemeContext";
-import { SettingSubTitle, ThemeSwitcher } from "../components";
+import { SettingSubTitle, ThemeSwitcher } from "components/Settings/styled";
 
 export class ThemeSelectorCL extends React.Component {
   constructor(props) {

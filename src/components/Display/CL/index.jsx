@@ -1,7 +1,11 @@
 import propTypes from "prop-types";
 import React from "react";
 import { connect } from "react-redux";
-import { DisplayContainer, DisplayInfo, DispalyAnswer } from "./components";
+import {
+  DisplayContainer,
+  DisplayInfo,
+  DispalyAnswer,
+} from "components/Display/styled";
 class DisplayCL extends React.Component {
   constructor(props) {
     super(props);
