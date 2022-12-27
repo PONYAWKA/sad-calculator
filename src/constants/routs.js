@@ -4,7 +4,7 @@ import { NoRoutPage } from "../Pages/ErrorPage/_404";
 import SettingsCL from "../Pages/Settings/CL/SettingsCL";
 import { SettingsFC } from "../Pages/Settings/FC/SettingsFC";
 
-export const HOME_PAGE_FC = "/sad-calculator/";
+export const HOME_PAGE_FC = "/";
 export const HOME_PAGE_CL = "/sad-calculator/cl";
 export const SETTINGS_FC = "/sad-calculator/settingsFC";
 export const SETTINGS_CL = "/sad-calculator/settingsCL";
