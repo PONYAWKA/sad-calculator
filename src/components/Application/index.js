@@ -5,7 +5,7 @@ import { ROUTES } from "@/constants/routs";
 import { GlobalTheme } from "constants/themes";
 import { getStorageTheme, setStorageTheme } from "utils/localStorage";
 import { ThemeContext } from "utils/ThemeContext";
-import { ErrorBoundary } from "../ErrorBoudaries";
+import { ErrorBoundary } from "components/ErrorBoudaries";
 import { Header } from "components/Header/index";
 import { AppBody } from "components/Application/styled";
 

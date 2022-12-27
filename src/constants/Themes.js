@@ -10,6 +10,7 @@ const yellowGreen = "#2e9100";
 const greyBackground = "#858585";
 const white = "#fff";
 const dimWhite = "#b5b5b5";
+
 export const GlobalTheme = {
   light: {
     name: "light",
@@ -35,5 +36,6 @@ export const GlobalTheme = {
     background: white,
     underline: grey,
     keyBackground: yellowGreen,
+    textColor: black,
   },
 };
