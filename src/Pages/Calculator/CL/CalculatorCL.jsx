@@ -33,8 +33,8 @@ class ControlPanel extends React.Component {
 }
 
 CalculatorCL.propTypes = {
-  dispatch: PropTypes.func.isRequired,
-  historyShown: PropTypes.bool.isRequired,
+  dispatch: PropTypes.func,
+  historyShown: PropTypes.bool,
 };
 
 function mapStateToProps(state) {

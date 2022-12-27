@@ -20,6 +20,6 @@ class CalculatorCL extends React.Component {
   }
 }
 CalculatorCL.propTypes = {
-  dispatch: PropTypes.func.isRequired,
+  dispatch: PropTypes.func,
 };
 export default connect()(CalculatorCL);
