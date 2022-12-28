@@ -16,11 +16,11 @@ export const ControlPanel = styled.div`
 export const HideHistoryButton = styled.button`
   background: ${({ theme }) => theme.keyBackground};
   color: ${({ theme }) => theme.textColor};
-  max-height: 60px;
-  margin: 10% 0;
-  max-width: 60px;
-  font-size: 1rem;
+  max-height: ${({ theme }) => theme.height[4]}px;
+  margin: ${({ theme }) => theme.space[1]}% 0;
+  max-width: ${({ theme }) => theme.width[3]}px;
+  font-size: ${({ theme }) => theme.fontSize[0]}rem;
   border-width: 1px;
-  border-radius: 20px;
+  border-radius: ${({ theme }) => theme.borderRadius[0]}px;
   overflow: hidden;
 `;

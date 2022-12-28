@@ -4,8 +4,8 @@ import styled from "styled-components";
 export const HeaderBlock = styled.header`
   justify-content: space-between;
   align-items: center;
-  padding: 20px 30px;
-  max-height: 100px;
+  padding: ${({ theme }) => theme.space[2]}px ${({ theme }) => theme.space[3]}px;
+  max-height: ${({ theme }) => theme.height[6]}px;
   background: ${({ theme }) => theme.header};
   color: ${({ theme }) => theme.textcolor};
   border: 1px solid #707070;
@@ -27,8 +27,8 @@ export const HeaderNavigationContainer = styled.div`
 `;
 
 export const HeaderLink = styled(Link)`
-  margin: 0 15px;
-  font-size: 20px;
+  margin: 0 ${({ theme }) => theme.space[2]}px;
+  font-size: ${({ theme }) => theme.fontSize[1]}rem;
   color: #b5b5b5;
   text-decoration: ${(props) => props._isactive};
   &:hover {

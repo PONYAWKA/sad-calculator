@@ -1,23 +1,23 @@
 import styled from "styled-components";
 
 export const SettingContent = styled.div`
-  margin-left: 20px;
+  margin-left: ${({ theme }) => theme.space[2]}px;
   display: flex;
   flex-direction: column;
-  font-size: 2rem;
-  max-width: 300px;
+  font-size: ${({ theme }) => theme.fontSize[2]}rem;
+  max-width: ${({ theme }) => theme.width[7]}px;
   color: ${({ theme }) => theme.textColor};
 `;
 export const SettingTitle = styled.h3`
   text-align: center;
 `;
 export const SettingSubTitle = styled.div`
-  font-size: 1rem;
+  font-size: ${({ theme }) => theme.fontSize[1]}rem;
 `;
 export const ThemeSwitcher = styled.select`
-  padding: 20px 0;
+  padding: ${({ theme }) => theme.space[2]}px 0;
   text-align: center;
-  font-size: 2rem;
+  font-size: ${({ theme }) => theme.fontSize[2]}rem;
   background: ${({ theme }) => theme.keyBackground};
   color: ${({ theme }) => theme.textColor};
   border-radius: 10px;
@@ -28,10 +28,10 @@ export const ThemeSwitcher = styled.select`
   }
 `;
 export const ClearHistoryButton = styled.button`
-  padding: 20px 10px;
-  margin-top: 30px;
-  font-size: 2rem;
-  border-radius: 10px;
+  padding: ${({ theme }) => theme.space[2]}px ${({ theme }) => theme.space[1]}px;
+  margin-top: ${({ theme }) => theme.space[3]}px;
+  font-size: ${({ theme }) => theme.fontSize[2]}rem;
+  border-radius: ${({ theme }) => theme.borderRadius[2]}px;
   border-width: 1px;
   background: ${({ theme }) => theme.keyBackground};
   color: ${({ theme }) => theme.textColor};

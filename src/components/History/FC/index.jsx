@@ -8,7 +8,6 @@ import {
 
 export const HistoryFC = () => {
   const history = useSelector((state) => state.history);
-  console.log("render");
   return (
     <HistoryBody>
       <HistoryTitle>HISTORY</HistoryTitle>

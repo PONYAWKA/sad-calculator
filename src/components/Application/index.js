@@ -11,7 +11,7 @@ import { AppBody } from "components/Application/styled";
 
 function App() {
   const [theme, setTheme] = useState(
-    GlobalTheme[getStorageTheme()] ?? GlobalTheme.dark
+    GlobalTheme(getStorageTheme()) ?? GlobalTheme("dark")
   );
 
   const toggleTheme = (event) => {
@@ -19,15 +19,15 @@ function App() {
     switch (value) {
       case "light":
         setStorageTheme("light");
-        setTheme(GlobalTheme.light);
+        setTheme(GlobalTheme("light"));
         break;
       case "dark":
         setStorageTheme("dark");
-        setTheme(GlobalTheme.dark);
+        setTheme(GlobalTheme("dark"));
         break;
       case "colored":
         setStorageTheme("colored");
-        setTheme(GlobalTheme.colored);
+        setTheme(GlobalTheme("colored"));
         break;
     }
   };
