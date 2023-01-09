@@ -39,6 +39,7 @@ export const ThemeColor = {
     textColor: black,
   },
 };
+
 const width = [10, 20, 30, 60, 90, 100, 200, 300, 400, "auto"];
 const height = [2, 10, 20, 50, 60, 80, 90, 100];
 const space = [0, 10, 15, 30, 40, 50];

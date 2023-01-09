@@ -1,7 +1,7 @@
-import { KeypadButton, KeypadContainer } from "components/Keypad/styled";
+import propTypes from "prop-types";
 import { KEYS } from "constants/keypadKeys";
 import { ThemeContext } from "utils/ThemeContext";
-import propTypes from "prop-types";
+import { KeypadButton, KeypadContainer } from "components/Keypad/styled";
 
 export const KeypadFC = ({ keypadHandle }) => {
   const handleOnDigit = (e) => {
