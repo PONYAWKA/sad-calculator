@@ -91,10 +91,11 @@ export const expressionCalculator = (string) => {
   } catch (e) {
     console.log(e);
     addToast({
+      label: "Error",
       text: e.message,
       duration: 2000,
       type: "error",
-      animation: "letfToRight",
+      animation: "leftToRight",
     });
   }
 };

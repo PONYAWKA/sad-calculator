@@ -5,13 +5,16 @@ import {
   CalculatorBody,
   HideHistoryButton,
 } from "components/Calculator/styled";
+import { addToast } from "sad-toast-lib";
 import { CalculatorFC } from "components/Calculator/FC/index";
+import { ToastConfin } from "@/Pages/Calculator/toastConfig";
 export const ControlPanelFC = () => {
   const dispatch = useDispatch();
   const historyShown = useSelector((state) => state.historyShown);
 
   const hideHistoryButton = () => {
     dispatch(hideShowHistory());
+    addToast(ToastConfin(historyShown));
   };
   return (
     <CalculatorBody>

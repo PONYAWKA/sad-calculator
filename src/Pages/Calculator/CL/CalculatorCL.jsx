@@ -8,6 +8,8 @@ import {
   HideHistoryButton,
 } from "components/Calculator/styled";
 import CalculatorCL from "components/Calculator/CL/index";
+import { addToast } from "sad-toast-lib";
+import { ToastConfin } from "@/Pages/Calculator/toastConfig";
 class ControlPanel extends React.Component {
   constructor(props) {
     super(props);
@@ -18,6 +20,7 @@ class ControlPanel extends React.Component {
 
     const hideHistoryButton = () => {
       dispatch(hideShowHistory());
+      addToast(ToastConfin(historyShown));
     };
 
     return (
