@@ -16,7 +16,7 @@
     "react-router-dom": "^6.4.5",
     "react-scripts": "5.0.1",
     "redux": "^4.2.0",
-    "sad-toast-lib": "^1.1.9",
+    "sad-toast-lib": "^1.2.0",
     "styled-components": "^5.3.6",
     "web-vitals": "^2.1.4",
     "webpack": "^5.75.0",
