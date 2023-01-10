@@ -8,15 +8,16 @@ import { ThemeContext } from "utils/ThemeContext";
 import { ErrorBoundary } from "components/ErrorBoudaries";
 import { Header } from "components/Header/index";
 import { AppBody } from "components/Application/styled";
-import { useToast } from "sad-toast-lib";
+import { useToast, addToast } from "sad-toast-lib";
+import { ThemeToastConfig } from "./config";
 function App() {
   const [theme, setTheme] = useState(
     GlobalTheme(getStorageTheme()) ?? GlobalTheme("dark")
   );
-  const { Toast, addToast } = useToast();
+  const { Toast } = useToast();
   const toggleTheme = (event) => {
-    addToast({ duration: 0, type: "info" });
     const { value } = event.target;
+    addToast(ThemeToastConfig(value));
     switch (value) {
       case "light":
         setStorageTheme("light");
@@ -34,7 +35,7 @@ function App() {
   };
 
   return (
-    <ErrorBoundary>
+    <ErrorBoundary addToast={addToast}>
       <ThemeContext.Provider value={{ theme, toggleTheme }}>
         <ThemeProvider theme={theme}>
           <AppBody>

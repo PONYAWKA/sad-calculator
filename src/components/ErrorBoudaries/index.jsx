@@ -11,7 +11,7 @@ export class ErrorBoundary extends React.Component {
   }
 
   componentDidCatch(error) {
-    console.log(error);
+    this.props.addToast({ text: error, type: "warning" });
   }
 
   render() {

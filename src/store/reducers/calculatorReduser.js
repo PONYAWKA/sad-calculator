@@ -65,6 +65,7 @@ export const CalculatorReduser = (state = initialState, action) => {
         ExpressionCommand,
         state.expression
       );
+      if (!calcExp) return state;
       if (singList[lastSymbol]) return state;
       if (String(expression) === String(calcExp)) return state;
 
